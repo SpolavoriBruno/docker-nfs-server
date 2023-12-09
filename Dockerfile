@@ -7,6 +7,7 @@ RUN apk --update --no-cache add bash nfs-utils libcap && \
     # remove the default config files
     rm -v /etc/idmapd.conf /etc/exports
 
+USER 1000
 # http://wiki.linux-nfs.org/wiki/index.php/Nfsv4_configuration
 RUN mkdir -p /var/lib/nfs/rpc_pipefs                                                     && \
     mkdir -p /var/lib/nfs/v4recovery                                                     && \
